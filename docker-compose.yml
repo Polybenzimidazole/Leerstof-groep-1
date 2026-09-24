@@ -1,0 +1,15 @@
+services:
+  MachineLearning:
+    image: aiteachingai/courses:pytorch
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - KERAS_BACKEND=torch
+      - KAGGLE_USERNAME=jordanvanoverberge
+      - KAGGLE_KEY=KGAT_7696aa9361b0058c12648d596e33d3cf
+    ports:
+      - 8888:8888
+      - 6006:6006
+      - 5000:5000
+    volumes:
+      # TODO: Voeg hier extra folders toe om ze zichtbaar te maken in je containers
+      - C:\Users\vanov\Documents\GitHub\Leerstof-groep-1\project:/workspace
